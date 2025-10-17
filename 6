@@ -1,0 +1,32 @@
+namespace c_homework1._6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the temperature: ");
+            double temp = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Choose the transfer direction:");
+            Console.WriteLine("1 - from Celsius to Fahrenheit");
+            Console.WriteLine("2 - from Fahrenheit to Celsius");
+            Console.Write("Your choice: ");
+            int choice = int.Parse(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                double fahrenheit = (temp * 9 / 5) + 32;
+                Console.WriteLine($"Temperature in Fahrenheit: {fahrenheit:F2}");
+            }
+            else if (choice == 2)
+            {
+                double celsius = (temp - 32) * 5 / 9;
+                Console.WriteLine($"Temperature in Celsius: {celsius:F2}");
+            }
+            else
+            {
+                Console.WriteLine("Wrong choice!");
+            }
+        }
+    }
+}
